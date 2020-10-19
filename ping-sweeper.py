@@ -3,6 +3,7 @@ A lightweight script to probe with ICMP packets for asset discovery on a network
 """
 from platform import system as system_name  # Returns the system/OS name
 import subprocess
+import ipcalc
 
 # ICMP probe
 def ping(host):
@@ -33,11 +34,10 @@ def ip_calc(IP, Format):
             current_ip = template_ip + str(x)
             ping(current_ip)
     elif Format == '2':
-        print('CIDR format')
+        for ips in ipcalc.Network(IP):
+            ping(str(ips))
     else:
         print('wong format')
-
-
 
 # running out in main
 if __name__ == '__main__':
