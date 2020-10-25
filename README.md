@@ -1,5 +1,5 @@
 # What is it?
-Audit-suite is a cutting edge run-of-the-mill collection of security auditing tools. 
+AuditLab is a cutting edge run-of-the-mill collection of Homemade security auditing tools. 
 
 ## What's inside dawg?
 * Port-scanner => Powershell
